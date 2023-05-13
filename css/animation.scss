@@ -1,0 +1,80 @@
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  animation: #{$str};
+}
+
+// highlight text
+@include keyframes(highlight) {
+  0% {
+    background-color: #1F1D1D;
+  }
+  50% {
+    background-color: #025951;
+  }
+  100% {
+    background-color: #F29F05;
+  }
+}
+// highlight text
+
+
+// marquee
+@include keyframes(first) {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0%;
+    }
+  }
+
+@include keyframes(second) {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@include keyframes(third) {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@include keyframes(fourth) {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+// marquee
+
+// footer
+@include keyframes(effect) {
+  3% {
+    color: #027373;
+  }
+  50% {
+    color: #9FC131;
+  }
+  100% {
+    color: #D95252;
+  }
+}
+// footer
